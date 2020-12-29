@@ -63,3 +63,12 @@ function finalMessage(yourScore , botScore){
     
 }
 
+function frontEnd(userImageChoice, botImageChoice , finalMessage ){
+
+    var ImgDB = {
+        'rock': document.getElementById('rock').src,
+        'scissor': document.getElementById('scissor').src,
+        'paper': document.getElementById('paper').src
+    }
+
+}
