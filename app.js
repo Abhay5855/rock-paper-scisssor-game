@@ -1,9 +1,11 @@
 function rpsGame(yourChoice){
     console.log(yourChoice);
     var userChoice , computerChoice;
-    computerChoice = randomNoToChoice(selectRandom);
-    results = winnerDecider(yourChoice, botChoice)
-    console.log(results)
+    userChoice = yourChoice.id
+    computerChoice = randomNoToChoice(selectRandom());
+    console.log('Bot choice:', computerChoice);
+    results = winnerDecider(userChoice, botChoice);
+    console.log(results);
 
     
 }
