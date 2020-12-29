@@ -63,7 +63,7 @@ function finalMessage(yourScore , botScore){
     
 }
 
-function frontEnd(userImageChoice, botImageChoice , finalMessage ){
+function frontEnd(userImageChoice, computerImageChoice , finalMessage ){
 
     var ImgDB = {
         'rock': document.getElementById('rock').src,
@@ -75,6 +75,9 @@ function frontEnd(userImageChoice, botImageChoice , finalMessage ){
     document.getElementById('rock').remove();
     document.getElementById('scissor').remove();
     document.getElementById('paper').remove();
+
+
+
 
 
 }
