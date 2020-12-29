@@ -42,3 +42,23 @@ function winnerDecider(yourChoice, botChoice){
     return [yourScore, botScore];
 }
 
+function finalMessage(yourScore , botScore){
+    if(yourScore === 0){
+        return{'message':'you lost!' , 'color':'red'};
+
+    }
+
+    else if(yourScore === 0.5){
+        return{'message':'you tied!' , 'color':'yellow'};
+
+    }
+
+    else {
+        return{'message':'you Won!' , 'color':'green'};
+
+    }
+
+
+
+    
+}
