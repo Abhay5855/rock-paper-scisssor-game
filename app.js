@@ -71,4 +71,10 @@ function frontEnd(userImageChoice, botImageChoice , finalMessage ){
         'paper': document.getElementById('paper').src
     }
 
+    //to remove images
+    document.getElementById('rock').remove();
+    document.getElementById('scissor').remove();
+    document.getElementById('paper').remove();
+
+
 }
