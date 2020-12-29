@@ -17,3 +17,7 @@ function randomNoToChoice(number){
 
 }
 
+function winnerDecider(){
+    
+}
+
