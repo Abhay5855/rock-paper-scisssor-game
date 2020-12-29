@@ -76,6 +76,12 @@ function frontEnd(userImageChoice, computerImageChoice , finalMessage ){
     document.getElementById('scissor').remove();
     document.getElementById('paper').remove();
 
+    //div
+    userDiv  = document.createElement('div');
+    computerDiv  = document.createElement('div');
+    finalMessageDiv  = document.createElement('div');
+    
+
 
 
 
