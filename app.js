@@ -65,7 +65,7 @@ function finalMessage(yourScore , botScore){
 
 function frontEnd(userImageChoice, computerImageChoice , finalMessage ){
 
-    var ImgDB = {
+    var imgDB = {
         'rock': document.getElementById('rock').src,
         'scissor': document.getElementById('scissor').src,
         'paper': document.getElementById('paper').src
@@ -80,6 +80,11 @@ function frontEnd(userImageChoice, computerImageChoice , finalMessage ){
     userDiv  = document.createElement('div');
     computerDiv  = document.createElement('div');
     finalMessageDiv  = document.createElement('div');
+
+
+    userDiv.innerHTML = "<img src='" + imgDB[userChoice] + "' height=150 width=150>"
+
+    document.getElementById('flex-box-rps-div').appendChild(userDiv);
     
 
 
