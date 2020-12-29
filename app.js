@@ -11,4 +11,6 @@ function selectRandom(){
 
 function randomNoToChoice(number){
 
+    return ['rock', 'paper', 'scissor'][number]
+
 }
