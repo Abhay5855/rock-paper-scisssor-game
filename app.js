@@ -17,12 +17,15 @@ function randomNoToChoice(number){
 
 }
 
-function winnerDecider(){
+function winnerDecider(yourChoice, botChoice){
 
     var rpsDB = {
         'rock': {'scissor':1 , 'rock':0.5 , 'paper':0},
         'paper': {'rock':1 , 'paper':0.5 , 'scissor':0},
         'scisssor': {'paper':1, 'scissor':0.5, 'rock':0}
-    }
+    };
+
+    var yourChoice = rpsDB[yourChoice][botChoice];
+    var botChoice = rpsDB[botChoice][yourChoice];
 }
 
