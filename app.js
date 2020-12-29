@@ -8,3 +8,7 @@ function selectRandom(){
 
     return Math.floor(Math.random() * 3)
 }
+
+function randomNoToChoice(number){
+
+}
