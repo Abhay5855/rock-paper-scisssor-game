@@ -2,6 +2,8 @@ function rpsGame(yourChoice){
     console.log(yourChoice);
     var userChoice , computerChoice;
     computerChoice = randomNoToChoice(selectRandom);
+    results = winnerDecider(yourChoice, botChoice)
+    console.log(results)
 
     
 }
@@ -30,6 +32,6 @@ function winnerDecider(yourChoice, botChoice){
     var botScore = rpsDB[botChoice][yourChoice];
 
 
-    return [yourChoice, computerChoice];
+    return [yourScore, botScore];
 }
 
