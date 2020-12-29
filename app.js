@@ -2,6 +2,7 @@ function rpsGame(yourChoice){
     console.log(yourChoice);
     var userChoice , computerChoice;
     computerChoice = randomNoToChoice(selectRandom);
+
     
 }
 
@@ -25,7 +26,10 @@ function winnerDecider(yourChoice, botChoice){
         'scisssor': {'paper':1, 'scissor':0.5, 'rock':0}
     };
 
-    var yourChoice = rpsDB[yourChoice][botChoice];
-    var botChoice = rpsDB[botChoice][yourChoice];
+    var yourScore = rpsDB[yourChoice][botChoice];
+    var botScore = rpsDB[botChoice][yourChoice];
+
+
+    return [yourChoice, computerChoice];
 }
 
