@@ -12,6 +12,9 @@ function rpsGame(yourChoice){
     results = winnerDecider(userChoice, computerChoice);
     console.log(results);
 
+    message = finalMessage(results);
+    console.log(message);
+  
     
 }
 
@@ -57,8 +60,6 @@ function finalMessage(yourScore , botScore){
         return{'message':'you Won!' , 'color':'green'};
 
     }
-
-
-
     
 }
+
