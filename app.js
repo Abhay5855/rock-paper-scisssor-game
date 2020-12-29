@@ -5,5 +5,6 @@ function rpsGame(yourChoice){
 
 
 function selectRandom(){
-    
+
+    return Math.floor(Math.random() * 3)
 }
