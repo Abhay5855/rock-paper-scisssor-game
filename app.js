@@ -1,15 +1,15 @@
 function rpsGame(yourChoice){
     console.log(yourChoice);
 
-    var userChoice , computerChoice;
+    var humanChoice,botChoice;
 
-    userChoice = yourChoice.id;
+    humanChoice = yourChoice.id;
 
-    computerChoice = randomNoToChoice(selectRandom());
+    botChoice = randomNoToChoice(selectRandom())
 
-    console.log('Bot choice:', computerChoice);
+    console.log('Any choice:', botChoice);
 
-    results = winnerDecider(userChoice, computerChoice);
+    results = winnerDecider(humanChoice, botChoice);
     console.log(results);
 
     message = finalMessage(results);
@@ -26,23 +26,24 @@ function selectRandom(){
 
 function randomNoToChoice(number){
 
-    return ['rock', 'scissor', 'paper'][number];
+    return ['rock', 'paper', 'scissors'][number];
 
 }
 
-function winnerDecider(yourChoice, botChoice){
+function winnerDecider(yourChoice, computerChoice){
 
     var rpsDB = {
-        'rock': {'scissor':1 , 'rock':0.5 , 'paper':0},
-        'scisssor': {'paper':1, 'scissor':0.5, 'rock':0},
-        'paper': {'rock':1 , 'paper':0.5 , 'scissor':0}
+        'rock': {'scissors':1 , 'rock':0.5 , 'paper':0},
+        'paper': {'rock':1 , 'paper':0.5 , 'scissors':0},
+        'scisssors': {'paper':1, 'scissors':0.5, 'rock':0}
+        
     };
 
-    var yourScore = rpsDB[yourChoice][botChoice];
-    var botScore = rpsDB[botChoice][yourChoice];
+    var yourScore =      rpsDB[yourChoice][computerChoice];
+    var computerScore =  rpsDB[computerChoice][yourChoice];
 
 
-    return [yourScore, botScore];
+    return [yourScore, computerScore]
 }
 
 function finalMessage(yourScore , botScore){
@@ -63,28 +64,37 @@ function finalMessage(yourScore , botScore){
     
 }
 
-function frontEnd(userImageChoice, computerImageChoice , finalMessage ){
+function frontEnd(humanImageChoice, botImageChoice , finalMessage){
 
     var imgDB = {
         'rock': document.getElementById('rock').src,
-        'scissor': document.getElementById('scissor').src,
-        'paper': document.getElementById('paper').src
+        'scissors': document.getElementById('paper').src,
+        'paper': document.getElementById('scissors').src
     }
 
     //to remove images
     document.getElementById('rock').remove();
-    document.getElementById('scissor').remove();
     document.getElementById('paper').remove();
+    document.getElementById('scissors').remove();
 
     //div
-    userDiv  = document.createElement('div');
-    computerDiv  = document.createElement('div');
-    finalMessageDiv  = document.createElement('div');
+    humanDiv  = document.createElement('div');
+    botDiv  = document.createElement('div');
+    messageDiv  = document.createElement('div');
 
 
-    userDiv.innerHTML = "<img src='" + imgDB[userChoice] + "' height=150 width=150>"
+    humanDiv.innerHTML = "<img src='" + imgDB[humanChoice] + "' height=150px width=150px>"
 
-    document.getElementById('flex-box-rps-div').appendChild(userDiv);
+    
+    messageDiv.innerHTML = "<h1 style = 'color: " + finalMessage['color'] + "; font-size: 40px padding:30px; '>" + finalMessage['message'] + "</h1>"
+
+    botDiv.innerHTML = "<img src='" + imgDB[botChoice] + "' height=150px width=150px>"
+
+    document.getElementById('flex-box-rps-div').appendChild(humanDiv);
+
+    document.getElementById('flex-box-rps-div').appendChild(messageDiv);
+    
+    document.getElementById('flex-box-rps-div').appendChild(botDiv);
     
 
 
