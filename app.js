@@ -96,12 +96,12 @@ function frontEnd(humanImageChoice, botImageChoice, finalMessage) {
     var messageDiv = document.createElement('div');
 
 
-    humanDiv.innerHTML = "<img src='" + imgDB[humanImageChoice] + "' width=150 padding=10>" 
+    humanDiv.innerHTML = "<img src='" + imgDB[humanImageChoice] + "' width=150  style='box-shadow: 5px 10px  40px #2563EB'>" 
 
 
-    messageDiv.innerHTML = "<h1 style = 'color: " + finalMessage['color'] + "; ' width=150 padding=10>" + finalMessage['message'] + "</h1>" 
+    messageDiv.innerHTML = "<h1 style = 'color: " + finalMessage['color'] + "; ' width=150  >" + finalMessage['message'] + "</h1>" 
 
-    botDiv.innerHTML = "<img src='" + imgDB[botImageChoice] + "' width=150 padding=10>" 
+    botDiv.innerHTML = "<img src='" + imgDB[botImageChoice] + "' width=150  style='box-shadow: 5px 10px  40px #DC2626'>" 
 
     document.getElementById('flex-box-rps-div').appendChild(humanDiv);
 
