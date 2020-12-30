@@ -6,8 +6,8 @@
 }
 
 .container {
-    border: 2px solid black;
-    width: 85%;
+    border: 1px solid black;
+    width: 75%;
     margin: 0 auto;
     text-align: center;
 }
@@ -19,9 +19,12 @@ h1 {
     font-size: 50px;
 }
 
-/* .flex-box-rps img{
-    padding: 6px;
-    margin: 0.5rem;
-} */
-
-
+.flex-box-rps {
+    display: flex;
+    /* border: 0.5px solid black; */
+    padding: 7px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
